@@ -1,0 +1,22 @@
+[package]
+name = "um-gui"
+description = "Unlock Music 原生桌面界面"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "um-gui"
+path = "src/main.rs"
+
+[dependencies]
+um-core.workspace = true
+# 用 glow(OpenGL) 后端而非 wgpu，构建更快、体积更小
+eframe = { version = "0.36", default-features = false, features = [
+    "default_fonts",
+    "glow",
+    "wayland",
+    "x11",
+] }
+# 原生文件选择框；默认特性只服务 Linux，Windows 上不需要
+rfd = { version = "0.17", default-features = false }

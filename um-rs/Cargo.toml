@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["crates/um-core", "crates/um-cli", "crates/um-gui"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+um-core = { path = "crates/um-core" }

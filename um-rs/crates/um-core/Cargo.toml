@@ -1,0 +1,20 @@
+[package]
+name = "um-core"
+description = "Unlock Music 解密核心（与 UI 无关，可被 CLI / GUI / WASM 复用）"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+# 官方 lib_um_crypto_rust（vendored），提供权威的算法实现与音频类型探测。
+# npm 包 @unlock-music/crypto 只是 um_wasm 这一层的 wasm-bindgen 包装。
+um_audio = { path = "../../vendor/lib_um_crypto_rust/um_audio" }
+umc_kgm = { path = "../../vendor/lib_um_crypto_rust/um_crypto/kgm" }
+umc_kuwo = { path = "../../vendor/lib_um_crypto_rust/um_crypto/kuwo" }
+umc_mg3d = { path = "../../vendor/lib_um_crypto_rust/um_crypto/mg3d" }
+umc_ncm = { path = "../../vendor/lib_um_crypto_rust/um_crypto/ncm" }
+umc_qmc = { path = "../../vendor/lib_um_crypto_rust/um_crypto/qmc" }
+umc_qtfm = { path = "../../vendor/lib_um_crypto_rust/um_crypto/qtfm" }
+umc_xiami = { path = "../../vendor/lib_um_crypto_rust/um_crypto/xiami" }
+umc_xmly = { path = "../../vendor/lib_um_crypto_rust/um_crypto/xmly" }
+hex = "0.4"

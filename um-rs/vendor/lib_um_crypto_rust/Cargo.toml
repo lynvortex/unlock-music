@@ -1,0 +1,5 @@
+[workspace]
+resolver = "2"
+# 只保留解密算法相关 crate：um_wasm / um_wasm_loader / um_cli 以及未被
+# um-core 依赖的 joox / qrc 已移除。
+members = ["um_audio", "um_crypto/*"]

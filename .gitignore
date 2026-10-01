@@ -1,0 +1,24 @@
+# Rust
+/um-rs/target/
+/um-rs/vendor/**/target/
+
+# 构建产物
+*.exe
+dist/
+coverage/
+
+# 原始 web 版未提交改动的备份，请移出仓库后删除本行
+/um-react-web-uncommitted-backup-*.zip
+
+# 编辑器与系统
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+*.suo
+*.sw?
+
+# 日志
+logs
+*.log
